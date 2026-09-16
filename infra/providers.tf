@@ -21,3 +21,5 @@ terraform {
         key                  = "terraform.tfstate"
     }
 }
+
+# Configure the Microsoft Azure Provider
