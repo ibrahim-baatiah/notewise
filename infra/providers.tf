@@ -22,4 +22,3 @@ terraform {
     }
 }
 
-# Configure the Microsoft Azure Provider
