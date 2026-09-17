@@ -22,5 +22,7 @@ variable "subnets" {
     description = "A list of subnets to create within the virtual network."
     type        = map(object({
         address_prefix = list(string)
+        delegation     = optional(string)
+        create_nsg     = optional(bool, true)
     }))
 }

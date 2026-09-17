@@ -22,10 +22,12 @@ module "network" {
 
     subnets = {
         snet-aks = {
-            address_prefix = ["10.0.0.0/22"]
+            address_prefix = ["10.0.0.0/22"],
+            create_nsg = false
         }
         snet-db = {
-            address_prefix = ["10.0.4.0/24"]
+            address_prefix = ["10.0.4.0/24"],
+            delegation = "Microsoft.DBforPostgreSQL/flexibleServers"
         }
         snet-pe = {
             address_prefix = ["10.0.5.0/24"]
