@@ -9,3 +9,11 @@ output "subnet_ids" {
 output "log_analytics_workspace_id" {
   value = module.log_analytics_workspace.log_analytics_workspace_id
 }
+
+output "acr_id" {
+  value = module.acr.acr_id
+}
+
+output "acr_login_server" {
+  value = module.acr.acr_login_server
+}

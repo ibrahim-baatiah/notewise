@@ -44,3 +44,15 @@ module "log_analytics_workspace" {
     sku = "PerGB2018"
     retention_in_days = 30
 }
+
+module "acr" {
+    source = "./modules/acr"
+
+    acr_name = "notewiseacr"
+    resource_group_name = azurerm_resource_group.notewise.name
+    location = var.location
+    sku = "Basic"
+    admin_enabled = false
+    georeplications = []
+    zone_redundancy_enabled = false
+}
