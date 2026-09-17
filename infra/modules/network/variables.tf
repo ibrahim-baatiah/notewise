@@ -18,9 +18,9 @@ variable "resource_group_name" {
   type        = string
 }
 
-# variable "subnets" {
-#     description = "A list of subnets to create within the virtual network."
-#     type        = map(object({
-#         address_prefix = list(string)
-#     }))
-# }
+variable "subnets" {
+    description = "A list of subnets to create within the virtual network."
+    type        = map(object({
+        address_prefix = list(string)
+    }))
+}
