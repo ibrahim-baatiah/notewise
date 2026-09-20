@@ -30,3 +30,4 @@ uploads/
 .env.*
 !.env.example
 local.settings.json
+**/.terraform/*
