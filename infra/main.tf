@@ -56,3 +56,5 @@ module "acr" {
     georeplications = []
     zone_redundancy_enabled = false
 }
+
+# Run Terraform Infra Pipeline
