@@ -48,7 +48,7 @@ module "log_analytics_workspace" {
 module "acr" {
     source = "./modules/acr"
 
-    acr_name = "notewiseacr"
+    acr_name = "notewiseacr01"
     resource_group_name = azurerm_resource_group.notewise.name
     location = var.location
     sku = "Basic"

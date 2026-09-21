@@ -3,10 +3,6 @@ name: Destroying Infrastructure Pipeline
 on:
   workflow_dispatch:
 
-  push:
-    branches:
-      - notewise
-
 permissions:
   id-token: write
   contents: read
