@@ -14,11 +14,6 @@ variable "resource_group_name" {
   description = "The name of the resource group in which the key vault will be created."
 }
 
-variable "key_name" {
-  type        = string
-  description = "The name of the key to be created. The value will be randomly generated if blank."
-}
-
 variable "sku_name" {
   type        = string
   description = "The SKU of the vault to be created."
