@@ -64,7 +64,7 @@ module "key_vault" {
 module "private_endpoint" {
     source = "./modules/private_endpoint"
 
-    name = "notewise-pe"
+    name = "privatelink.vaultcore.azure.net"
     resource_group_name = azurerm_resource_group.notewise.name
     location = var.location
     subnet_id = module.network.subnet_ids["snet-pe"]
