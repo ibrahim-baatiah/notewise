@@ -67,8 +67,8 @@ module "private_endpoint" {
     name = "notewise-pe"
     resource_group_name = azurerm_resource_group.notewise.name
     location = var.location
-    subnet_id = module.network.subnets["snet-pe"].id
-    private_connection_resource_id = module.key_vault.key_vault_id
+    subnet_id = module.network.subnet_ids["snet-pe"].id
+    private_connection_resource_id = module.key_vault.vault_id
     subresource_names = ["vault"]
     virtual_network_id = module.network.vnet_id
 }
