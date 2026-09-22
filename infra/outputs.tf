@@ -17,3 +17,11 @@ output "acr_id" {
 output "acr_login_server" {
   value = module.acr.acr_login_server
 }
+
+output "key_vault_id" {
+  value = module.key_vault.vault_id
+}
+
+output "key_vault_uri" {
+  value = module.key_vault.vault_uri
+}

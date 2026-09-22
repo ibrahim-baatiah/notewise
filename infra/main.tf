@@ -1,12 +1,3 @@
-terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "=5.0.0"
-    }
-  }
-}
-
 resource "azurerm_resource_group" "notewise" {
     name = "notewise"
     location = var.location
@@ -57,4 +48,15 @@ module "acr" {
     zone_redundancy_enabled = false
 }
 
-# Run Terraform Infra Pipeline
+# Wiring up the Key Vault module
+module "key_vault" {
+    source = "./modules/key_vault"
+    vault_name = "notewise-kv"
+    resource_group_name = azurerm_resource_group.notewise.name
+    location = var.location
+    sku_name = "standard"
+    rbac_auth_enabled = true
+    purge_protection_enabled = true
+    soft_delete_retention_days = 90
+    public_network_access_enabled = false
+}
