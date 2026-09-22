@@ -17,7 +17,6 @@ variable "resource_group_name" {
 variable "key_name" {
   type        = string
   description = "The name of the key to be created. The value will be randomly generated if blank."
-  default     = ""
 }
 
 variable "sku_name" {
