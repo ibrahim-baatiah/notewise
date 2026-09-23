@@ -19,5 +19,8 @@ terraform {
         storage_account_name = "tfblobcontainer"
         container_name       = "terraform"
         key                  = "terraform.tfstate"
+
+        use_azuread_auth = true
+        use_oidc          = true
     }
 }
