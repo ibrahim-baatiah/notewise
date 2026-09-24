@@ -25,3 +25,7 @@ output "key_vault_id" {
 output "key_vault_uri" {
   value = module.key_vault.vault_uri
 }
+
+output "postgresql_server_fqdn" {
+  value = module.postgresql_server.server_fqdn
+}

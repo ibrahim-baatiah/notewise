@@ -73,4 +73,19 @@ module "private_endpoint" {
     virtual_network_id = module.network.vnet_id
 }
 
-## Test
+module "postgresql_server" {
+    source = "./modules/postgresql_server"
+
+    server_name = "notewise-server-db"
+    resource_group_name = azurerm_resource_group.notewise.name
+    location = var.location
+    private_dns_zone_name = "privatelink.postgres.database.azure.com"
+    virtual_network_id = module.network.vnet_id
+    postgresql_version = "16"
+    sku_name = "B_Standard_B1ms"
+    storage_mb = 32768
+    backup_retention_days = 7
+    geo_redundant_backup_enabled = false
+    delegated_subnet_id = module.network.subnet_ids["snet-db"]
+    key_vault_id = module.key_vault.vault_id
+}
