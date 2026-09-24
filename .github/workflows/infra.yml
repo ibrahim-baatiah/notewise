@@ -3,7 +3,7 @@ name: Deploying Infrastructure Pipeline
 on:
   push:
     branches:
-      - notewise
+      - main
     paths:
       - infra/**
 
