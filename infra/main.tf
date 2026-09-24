@@ -23,6 +23,9 @@ module "network" {
         snet-pe = {
             address_prefix = ["10.0.5.0/24"]
         }
+        default = {
+            address_prefix = ["10.0.8.0/24"]
+        }
     }
 }
 
